@@ -15,23 +15,15 @@ class UserTableSeeder extends Seeder
             'name' => 'administrator',
             'username' => 'administrator',
             'password' => 'user',
-            'role_id' => 1
+            'role_id' => 1,
         ]);
 
         App\User::create([
-            'name' => 'ppic',
-            'username' => 'ppic',
+            'name' => 'siswa',
+            'username' => 'siswa',
             'password' => 'user',
-            'role_id' => 2
+            'role_id' => 2,
         ]);
-
-        App\User::create([
-            'name' => 'produksi',
-            'username' => 'produksi',
-            'password' => 'user',
-            'role_id' => 3
-        ]);
-
 
     }
 }
