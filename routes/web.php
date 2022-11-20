@@ -12,22 +12,26 @@
 */
 
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:administrator']], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:administrator']], function () {
 
     Route::get('/', function () {
 
         return view('admin.index');
     });
+    Route::get('/students/result/', 'StudentController@result')->name('student.result');
+
     Route::resource('users', 'UserController');
     Route::resource('students', 'StudentController');
     Route::resource('psikotest', 'PsikotestController');
 });
 
-Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], function() {
+Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], function () {
 
     Route::get('/', function () {
         return view('siswa.index');
     });
+    Route::get('/students/result/{id}', 'StudentController@result_id')->name('student.result.id');
+
     Route::resource('answer', 'AnswerController');
     Route::get('psikotest', 'PsikotestController@soal')->name('psikotest.soal');
 });
@@ -40,6 +44,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-

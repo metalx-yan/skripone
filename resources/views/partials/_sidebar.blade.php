@@ -27,11 +27,10 @@
                             <li><a href="{{ route('users.index') }}">Account</a></li>
                             <li><a href="{{ route('students.index') }}">Data Siswa</a></li>
                             <li><a href="{{ route('psikotest.index') }}">Test Pendaftaran</a></li>
-                            <li><a href="">Hasil Pendaftaran</a></li>
+                            <li><a href="{{ route('student.result') }}">Hasil Pendaftaran</a></li>
                         </ul>
                     </li>
                 @endif
-
 
                 @if (Auth::user()->role->name == 'siswa')
                     <li class="nav-small-cap">PERSONAL</li>
@@ -48,7 +47,7 @@
                             </li>
         
                             {{-- <li><a href="">Test Pendaftaran</a></li> --}}
-                            <li><a href="">Hasil Pendaftaran</a></li>
+                            <li><a href="{{ route('student.result.id',Auth::user()->id) }}">Hasil Pendaftaran</a></li>
                         </ul>
                     </li>
                 @endif
