@@ -41,7 +41,7 @@
                             {{-- <li>
                                 <a class="" href="" aria-expanded="false"></i><span class="hide-menu">Dashboard</span></a>
                             </li> --}}
-                            <li><a href="">Data Siswa</a></li>
+                            <li><a href="{{ route('student.view.id', Auth::user()->id) }}">Data Siswa</a></li>
                             <li>
                                 <a class="" href="{{ route('psikotest.soal') }}" aria-expanded="false"><span class="hide-menu">Test Pendaftaran</span></a>
                             </li>

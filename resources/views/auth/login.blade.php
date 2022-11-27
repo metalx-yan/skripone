@@ -42,7 +42,7 @@
             <div class="login-box card" style="border-radius: 15px">
             <div class="card-body" >
                 <center>
-                    {{-- <img src="http://www.prospera-perwira.com/img/logo_prospera.png" height="50%" width="60%" alt=""> --}}
+                    <img src="{{ asset('images/pmu.jpeg') }}" height="35%" width="35%" alt="homepage" class="dark-logo" />
                     <p>
                 </center>
                     <!-- <h3 class="box-title m-b-20"><b>SIGN IN</b></h3> -->

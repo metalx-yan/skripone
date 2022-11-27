@@ -98,6 +98,14 @@ class StudentController extends Controller
         return view('students.edit',compact('get'));
     }
 
+    public function view($id)
+    {
+        $get = DB::select("SELECT a.* FROM students a join users c
+        where c.id = $id")[0];
+        // dd($get);
+        return view('students.view',compact('get'));
+    }
+
     /**
      * Update the specified resource in storage.
      *

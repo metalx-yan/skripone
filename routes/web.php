@@ -31,6 +31,7 @@ Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], func
         return view('siswa.index');
     });
     Route::get('/students/result/{id}', 'StudentController@result_id')->name('student.result.id');
+    Route::get('/students/view/{id}', 'StudentController@view')->name('student.view.id');
 
     Route::resource('answer', 'AnswerController');
     Route::get('psikotest', 'PsikotestController@soal')->name('psikotest.soal');
@@ -39,7 +40,7 @@ Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], func
 Route::get('/', function () {
 
     return view('welcome');
-});
+})->name('slash');
 
 Auth::routes();
 
