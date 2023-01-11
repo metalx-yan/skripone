@@ -191,10 +191,9 @@
 
                                 <select name="jurusan_pertama" id="" class="form-control">
                                     <option value="">Pilih Jurusan Petama</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2019">2019</option>
+                                    <option value="TEKNIK KENDARAN RINGAN (TERAKREDITASI A)">TEKNIK KENDARAN RINGAN (TERAKREDITASI A)</option>
+                                    <option value="OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)" >OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)</option>
+                                    <option value="TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)" >TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)</option>
                                 </select>
                                 {!! $errors->first('jurusan_pertama', '<span class="invalid-feedback">:message</span>') !!}
                             </div>
@@ -202,10 +201,9 @@
                                 <label class="control-label">Jurusan Kedua</label>
                                 <select name="jurusan_kedua" id="" class="form-control">
                                     <option value="">Pilih Jurusan Kedua</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2019">2019</option>
+                                    <option value="TEKNIK KENDARAN RINGAN (TERAKREDITASI A)">TEKNIK KENDARAN RINGAN (TERAKREDITASI A)</option>
+                                    <option value="OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)" >OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)</option>
+                                    <option value="TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)">TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)</option>
                                 </select>
                                 {!! $errors->first('jurusan_kedua', '<span class="invalid-feedback">:message</span>') !!}
                             </div>

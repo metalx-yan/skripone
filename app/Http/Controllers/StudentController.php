@@ -100,9 +100,14 @@ class StudentController extends Controller
 
     public function view($id)
     {
-        $get = DB::select("SELECT a.* FROM students a join users c
-        where c.id = $id")[0];
-        // dd($get);
+        $gete = DB::select("SELECT a.* FROM students a right join users c on a.name = c.name where c.id = '$id'");
+        // dd($gete);
+        // if (count($gete) > 0) {
+            $get = $gete[0];
+        // } else {
+        //     $get = $id;
+        // }
+
         return view('students.view',compact('get'));
     }
 
@@ -115,6 +120,15 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request->all());
+        Student::find($id)->update($request->all());
+        // dd($request->all(),$id);
+        return redirect()->route('students.index');
+    }
+
+    public function updatesis(Request $request, $id)
+    {
+        // dd($request->all());
         Student::find($id)->update($request->all());
         // dd($request->all(),$id);
         return redirect()->route('students.index');

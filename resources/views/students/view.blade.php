@@ -12,7 +12,7 @@
                 </ol>
             </div>
         </div>
-        <form action="{{ route('students.update',$get->id) }}" method="post">
+        <form action="{{ route('student.update.id', $get->id) }}" method="post">
             @csrf
             @method('PUT')
             <div class="card" style="width: 65%;  margin: 0 auto; float: none;margin-bottom: 10px; ">
@@ -192,10 +192,9 @@
 
                                 <select name="jurusan_pertama" id="" class="form-control">
                                     <option value="">Pilih Jurusan Petama</option>
-                                    <option value="2022" {{ $get->jurusan_pertama == '2022' ? 'selected' : '' }}>2022</option>
-                                    <option value="2021" {{ $get->jurusan_pertama == '2021' ? 'selected' : '' }}>2021</option>
-                                    <option value="2020" {{ $get->jurusan_pertama == '2020' ? 'selected' : '' }}>2020</option>
-                                    <option value="2019" {{ $get->jurusan_pertama == '2019' ? 'selected' : '' }}>2019</option>
+                                    <option value="TEKNIK KENDARAN RINGAN (TERAKREDITASI A)" {{ $get->jurusan_pertama == 'TEKNIK KENDARAN RINGAN (TERAKREDITASI A)' ? 'selected' : '' }}>TEKNIK KENDARAN RINGAN (TERAKREDITASI A)</option>
+                                    <option value="OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)" {{ $get->jurusan_pertama == 'OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)' ? 'selected' : '' }}>OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)</option>
+                                    <option value="TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)" {{ $get->jurusan_pertama == 'TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)' ? 'selected' : '' }}>TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)</option>
                                 </select>
                                 {!! $errors->first('jurusan_pertama', '<span class="invalid-feedback">:message</span>') !!}
                             </div>
@@ -203,10 +202,9 @@
                                 <label class="control-label">Jurusan Kedua</label>
                                 <select name="jurusan_kedua" id="" class="form-control">
                                     <option value="">Pilih Jurusan Kedua</option>
-                                    <option value="2022" {{ $get->jurusan_kedua == '2022' ? 'selected' : '' }}>2022</option>
-                                    <option value="2021" {{ $get->jurusan_kedua == '2021' ? 'selected' : '' }}>2021</option>
-                                    <option value="2020" {{ $get->jurusan_kedua == '2020' ? 'selected' : '' }}>2020</option>
-                                    <option value="2019" {{ $get->jurusan_kedua == '2019' ? 'selected' : '' }}>2019</option>
+                                    <option value="TEKNIK KENDARAN RINGAN (TERAKREDITASI A)" {{ $get->jurusan_kedua == 'TEKNIK KENDARAN RINGAN (TERAKREDITASI A)' ? 'selected' : '' }}>TEKNIK KENDARAN RINGAN (TERAKREDITASI A)</option>
+                                    <option value="OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)" {{ $get->jurusan_kedua == 'OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)' ? 'selected' : '' }}>OTOMATISASI DAN TATA KELOLA PERKANTORAN (TERAKREDITASI B)</option>
+                                    <option value="TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)" {{ $get->jurusan_kedua == 'TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)' ? 'selected' : '' }}>TEKNIK KOMPUTER DAN JARINGAN (TERAKREDITASI C)</option>
                                 </select>
                                 {!! $errors->first('jurusan_kedua', '<span class="invalid-feedback">:message</span>') !!}
                             </div>

@@ -32,6 +32,7 @@ Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], func
     });
     Route::get('/students/result/{id}', 'StudentController@result_id')->name('student.result.id');
     Route::get('/students/view/{id}', 'StudentController@view')->name('student.view.id');
+    Route::put('/students/update/{id}', 'StudentController@updatesis')->name('student.update.id');
 
     Route::resource('answer', 'AnswerController');
     Route::get('psikotest', 'PsikotestController@soal')->name('psikotest.soal');
