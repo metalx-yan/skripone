@@ -38,16 +38,15 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        // 'email_address' => 'sometimes|required|email|unique:users',
-        // $as = $request->validate([
-        //     'username' => 'required|username|unique:users',
-        // ]);
-        // dd($as);
+        $request->validate([
+            'username' =>  'required|unique:users',
+        ]);
+      
         $st = Student::create($request->all());
         // dd($st->id);
         User::create([
             'name' => $request->name,
-            'username' => str_replace(' ', '', $request->name) . $st->id,
+            'username' => str_replace(' ', '', $request->name),
             'password' => 'user',
             'role_id' => 2,
             'student_id' => $st->id

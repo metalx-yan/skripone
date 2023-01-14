@@ -29,7 +29,7 @@ Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], func
 
     Route::get('/', function () {
         return view('siswa.index');
-    });
+    })->name('siswas');
     Route::get('/students/result/{id}', 'StudentController@result_id')->name('student.result.id');
     Route::get('/students/view/{id}', 'StudentController@view')->name('student.view.id');
     Route::put('/students/update/{id}', 'StudentController@updatesis')->name('student.update.id');
@@ -45,6 +45,7 @@ Route::group(['prefix' => 'kepsek', 'middleware' => ['auth', 'role:kepsek']], fu
     });
     Route::get('/students/all', 'StudentController@get_all')->name('student.get.all');
 });
+Route::post('/user/add/', 'UserController@created')->name('createda');
 
 
 Route::get('/', function () {
