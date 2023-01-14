@@ -15,12 +15,12 @@ class CreatePsikotestsTable extends Migration
     {
         Schema::create('psikotests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('answer_a');
-            $table->string('answer_b');
-            $table->string('answer_c');
-            $table->string('answer_d');
-            $table->string('answer_correct');
-            $table->string('question');
+            $table->longText('answer_a');
+            $table->longText('answer_b');
+            $table->longText('answer_c');
+            $table->longText('answer_d');
+            $table->longText('answer_correct');
+            $table->longText('question');
             $table->date('start');
             $table->date('end');
             $table->timestamps();

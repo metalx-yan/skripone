@@ -38,6 +38,15 @@ Route::group(['prefix' => 'siswa', 'middleware' => ['auth', 'role:siswa']], func
     Route::get('psikotest', 'PsikotestController@soal')->name('psikotest.soal');
 });
 
+Route::group(['prefix' => 'kepsek', 'middleware' => ['auth', 'role:kepsek']], function () {
+
+    Route::get('/', function () {
+        return view('kepsek.index');
+    });
+    Route::get('/students/all', 'StudentController@get_all')->name('student.get.all');
+});
+
+
 Route::get('/', function () {
 
     return view('welcome');

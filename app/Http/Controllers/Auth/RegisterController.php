@@ -65,7 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Student::create([
+        $get = Student::create([
             'name' => $data['name'],
             'matematika' => 0,
             'inggris' => 0,
@@ -74,7 +74,7 @@ class RegisterController extends Controller
         ]);
         return User::create([
             'name' => $data['name'],
-            'username' => str_replace(' ','',$data['name']),
+            'username' => str_replace(' ','',$data['name']).$get->id,
             'password' => $data['password'],
             'role_id' => 2
         ]);

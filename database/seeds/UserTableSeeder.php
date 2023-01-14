@@ -25,5 +25,12 @@ class UserTableSeeder extends Seeder
             'role_id' => 2,
         ]);
 
+        App\User::create([
+            'name' => 'Kepala Sekolah',
+            'username' => 'kepsek',
+            'password' => 'user',
+            'role_id' => 3,
+        ]);
+
     }
 }

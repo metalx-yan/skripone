@@ -51,6 +51,21 @@
                         </ul>
                     </li>
                 @endif
+
+                @if (Auth::user()->role->name == 'kepsek')
+                <li class="nav-small-cap">PERSONAL</li>
+                <li>
+                    <a class="has-arrow" href="#" aria-expanded="false"><i
+                            class="mdi mdi-account-outline"></i><span class="hide-menu">Master Data</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        {{-- <li>
+                            <a class="" href="" aria-expanded="false"></i><span class="hide-menu">Dashboard</span></a>
+                        </li> --}}
+                        <li><a href="{{ route('student.get.all') }}">Data Siswa</a></li>
+                        
+                    </ul>
+                </li>
+            @endif
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

@@ -53,7 +53,7 @@ class LoginController extends Controller
         elseif (Auth::user()->role->name == 'siswa') {
             return '/siswa';
         } else {
-            return '/produksi';
+            return '/kepsek';
         }
     }
 

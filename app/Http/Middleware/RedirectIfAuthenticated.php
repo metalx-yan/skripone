@@ -24,7 +24,7 @@ class RedirectIfAuthenticated
             } elseif (Auth::user()->role->name == 'siswa') {
                 return redirect('/siswa');
             }else {
-                return redirect('/produksi');
+                return redirect('/kepsek');
             }
         }
 

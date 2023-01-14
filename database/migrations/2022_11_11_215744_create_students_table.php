@@ -55,7 +55,7 @@ class CreateStudentsTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->unsignedBigInteger('student_id')->nullable();
 
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');;
         });
     }
 

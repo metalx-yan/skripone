@@ -38,10 +38,16 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        // 'email_address' => 'sometimes|required|email|unique:users',
+        // $as = $request->validate([
+        //     'username' => 'required|username|unique:users',
+        // ]);
+        // dd($as);
         $st = Student::create($request->all());
+        // dd($st->id);
         User::create([
             'name' => $request->name,
-            'username' => str_replace(' ', '', $request->name),
+            'username' => str_replace(' ', '', $request->name) . $st->id,
             'password' => 'user',
             'role_id' => 2,
             'student_id' => $st->id
@@ -50,6 +56,11 @@ class StudentController extends Controller
         return redirect()->route('students.index');
     }
 
+    function get_all()
+    {
+        $all = Student::all();
+        return view('students.all', compact('all'));
+    }
     /**
      * Display the specified resource.
      *
@@ -142,6 +153,9 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $get = Student::find($id);
+        $get->delete();
+
+        return redirect()->back();
     }
 }
