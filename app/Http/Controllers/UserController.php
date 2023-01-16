@@ -52,6 +52,14 @@ class UserController extends Controller
             'updated_at' => Carbon::now()
         ]);
 
+        Student::create([
+            'name' => $request->username,
+            'matematika' => 0,
+            'inggris' => 0,
+            'biologi' => 0,
+            'ipa' => 0,
+        ]);
+
         return redirect()->route('users.index');
     }
 
@@ -70,7 +78,13 @@ class UserController extends Controller
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-
+        Student::create([
+            'name' => $request->username,
+            'matematika' => 0,
+            'inggris' => 0,
+            'biologi' => 0,
+            'ipa' => 0,
+        ]);
         return redirect()->route('siswas');
     }
     /**

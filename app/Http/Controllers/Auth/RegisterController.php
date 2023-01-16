@@ -65,13 +65,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // $get = Student::create([
-        //     'name' => $data['name'],
-        //     'matematika' => 0,
-        //     'inggris' => 0,
-        //     'biologi' => 0,
-        //     'ipa' => 0,
-        // ]);
+         Student::create([
+            'name' => $data['name'],
+            'matematika' => 0,
+            'inggris' => 0,
+            'biologi' => 0,
+            'ipa' => 0,
+        ]);
         return User::create([
             'name' => $data['username'],
             'username' => str_replace(' ','',$data['username']),
