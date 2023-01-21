@@ -26,24 +26,54 @@
             @endphp
             <div class="card-body">
                 <br>
-                <table class="table border" id="myTable">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Name</th>
-                            <th>Tanggal Lahir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($all as $value)
+                <div style="overflow-x: scroll">
+                    <table class="table border" id="myTable">
+                        <thead>
                             <tr>
-                                <td>{{ $no++ }}</td>
-                                <td>{{ $value->name }}</td>
-                                <td>{{ $value->tgllahir }}</td>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Tempat Lahir</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Golongan Darah</th>
+                                <th>Berat Badan</th>
+                                <th>Tinggi Badan</th>
+                                <th>Alamat</th>
+                                <th>Kode Pos</th>
+                                <th>Agama</th>
+                                <th>Asal Sekolah</th>
+                                <th>Alamat Sekolah</th>
+                                <th>Tahun Lulus</th>
+                                <th>No Ijazah</th>
+                                <th>No Telp</th>
+                                <th>Email</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($all as $value)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $value->name }}</td>
+                                    <td>{{ $value->placebirthday }}</td>
+                                    <td>{{ $value->tgllahir }}</td>
+                                    <td>{{ $value->jenkelamin }}</td>
+                                    <td>{{ $value->goldarah }}</td>
+                                    <td>{{ $value->berat }}</td>
+                                    <td>{{ $value->tinggi }}</td>
+                                    <td>{{ $value->address }}</td>
+                                    <td>{{ $value->kodepos }}</td>
+                                    <td>{{ $value->agama }}</td>
+                                    <td>{{ $value->asalsekolah }}</td>
+                                    <td>{{ $value->address_school }}</td>
+                                    <td>{{ $value->thn_lulus }}</td>
+                                    <td>{{ $value->no_ijazah }}</td>
+                                    <td>{{ $value->no_telp }}</td>
+                                    <td>{{ $value->email }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

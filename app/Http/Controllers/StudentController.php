@@ -58,6 +58,7 @@ class StudentController extends Controller
     function get_all()
     {
         $all = Student::all();
+        // dd($all);
         return view('students.all', compact('all'));
     }
     /**
