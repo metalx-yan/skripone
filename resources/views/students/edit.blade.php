@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-6">Kode Pos</label>
+                        <label class="control-label col-sm-6">NISN</label>
                         <div class="col-sm-12">
                             <input type="text" name="kodepos"  value="{{ $get->kodepos }}"
                                 class="form-control {{ $errors->has('kodepos') ? 'is-invalid' : '' }}" required>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-6">No Telp/Hp</label>
+                        <label class="control-label col-sm-6">NIS</label>
                         <div class="col-sm-12">
                             <input type="text" name="no_telp"  value="{{ $get->no_telp }}"
                                 class="form-control {{ $errors->has('no_telp') ? 'is-invalid' : '' }}" required>
@@ -212,25 +212,25 @@
                     <div class="container">
                         <div class="row form-group">
                             <div class="col-sm-3">
-                                <label class="control-label">Nilai UN</label>
+                                <label class="control-label">Ukuran Baju</label>
                                 <input type="number" name="matematika" value="{{ $get->matematika }}" placeholder="Matematika"
                                     class="form-control {{ $errors->has('matematika') ? 'is-invalid' : '' }}" required>
                                 {!! $errors->first('matematika', '<span class="invalid-feedback">:message</span>') !!}
                             </div>
                             <div class="col-sm-3">
-                                <label class="control-label">Nilai UN</label>
+                                <label class="control-label">Ukuran Baju</label>
                                 <input type="number" name="inggris"  value="{{ $get->inggris }}" placeholder="Inggris"
                                     class="form-control {{ $errors->has('inggris') ? 'is-invalid' : '' }}" required>
                                 {!! $errors->first('inggris', '<span class="invalid-feedback">:message</span>') !!}
                             </div>
                             <div class="col-sm-3">
-                                <label class="control-label">Nilai UN</label>
+                                <label class="control-label">Ukuran Baju</label>
                                 <input type="number" name="biologi"  value="{{ $get->biologi }}" placeholder="Biologi"
                                     class="form-control {{ $errors->has('biologi') ? 'is-invalid' : '' }}" required>
                                 {!! $errors->first('biologi', '<span class="invalid-feedback">:message</span>') !!}
                             </div>
                             <div class="col-sm-3">
-                                <label class="control-label">Nilai UN</label>
+                                <label class="control-label">Ukuran Baju</label>
                                 <input type="number" name="ipa"  value="{{ $get->ipa }}" placeholder="IPA"
                                     class="form-control {{ $errors->has('ipa') ? 'is-invalid' : '' }}" required>
                                 {!! $errors->first('ipa', '<span class="invalid-feedback">:message</span>') !!}
