@@ -111,7 +111,7 @@ class StudentController extends Controller
 
     public function view($id)
     {
-        $gete = DB::select("SELECT a.* FROM students a right join users c on a.name = c.name where c.id = '$id'");
+        $gete = DB::select("SELECT a.* FROM students a right join users c on a.username = c.name where c.id = '$id'");
         // dd($gete);
         // if (count($gete) > 0) {
             $get = $gete[0];

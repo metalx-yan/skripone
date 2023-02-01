@@ -79,11 +79,7 @@ class UserController extends Controller
             'updated_at' => Carbon::now()
         ]);
         Student::create([
-            'name' => $request->username,
-            'matematika' => 0,
-            'inggris' => 0,
-            'biologi' => 0,
-            'ipa' => 0,
+            'username' => str_replace(' ','',$request->username),
         ]);
         return redirect()->route('siswas');
     }

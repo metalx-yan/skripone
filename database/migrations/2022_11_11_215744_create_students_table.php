@@ -15,6 +15,7 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('username')->nullable();
             $table->string('name')->nullable();
             $table->string('placebirthday')->nullable();
             $table->date('tgllahir')->nullable();
@@ -33,10 +34,7 @@ class CreateStudentsTable extends Migration
             $table->string('email')->nullable();
             $table->string('jurusan_pertama')->nullable();
             $table->string('jurusan_kedua')->nullable();
-            $table->string('matematika');
-            $table->string('inggris');
-            $table->string('biologi');
-            $table->string('ipa');
+            $table->string('ukuran')->nullable();
             $table->string('name_ayah')->nullable();
             $table->string('name_ibu')->nullable();
             $table->string('no_telp_orangtua')->nullable();
